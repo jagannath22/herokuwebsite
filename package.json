@@ -1,11 +1,12 @@
 {
-  "name": "registration_form",
+  "name": "registration-form1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "stack": "heroku-22"
   },
   "keywords": [],
   "author": "",
