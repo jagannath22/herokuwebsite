@@ -1,8 +1,8 @@
 const express=require("express");
 const path=require("path");
  const app=express();
+ const mongoose=require("mongoose");
 //require("../src/db/conn");
-const mongoose=require("mongoose");
 const hbs=require("hbs");
 const Register = require("./models/registers");
 const bcrypt=require("bcryptjs");
