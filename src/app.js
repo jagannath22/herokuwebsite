@@ -1,7 +1,8 @@
 const express=require("express");
 const path=require("path");
  const app=express();
-require("../src/db/conn");
+//require("../src/db/conn");
+const mongoose=require("mongoose");
 const hbs=require("hbs");
 const Register = require("./models/registers");
 const bcrypt=require("bcryptjs");
@@ -91,6 +92,12 @@ hbs.registerPartials(partials_path);
 //  } 
 //  securePassword("jaga@1");
 
-app.listen(port,()=>{
- console.log(`connection run at port no ${port}`);
-});
+mongoose.connect("mongodb+srv://jagannath1:12345@cluster0.xvfn2nw.mongodb.net/?retryWrites=true&w=majority")
+.then(()=>{
+    console.log("connection successful");
+    app.listen(port,()=>{
+      console.log(`connection run at port no ${port}`);
+     });
+}).catch((e)=>{
+    console.log("no connection");
+})
